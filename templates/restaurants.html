@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurants</title>
+</head>
+<body>
+
+<h1>Restaurants</h1>
+
+      {% with messages = get_flashed_messages() %}
+         {% if messages %}
+            <ul>
+               {% for message in messages %}
+               <li>{{ message }}</li>
+               {% endfor %}
+            </ul>
+         {% endif %}
+      {% endwith %}
+
+
+<br>
+{% for restaurant in restaurants %}
+<br>
+<h3>Name: {{ restaurant.name }}</h3>
+<h3>id: {{ restaurant.id }}</h3>
+<a href={{ url_for('editRestaurant', restaurant_id = restaurant.id) }}>edit</a>
+<a href={{ url_for('deleteRestaurant', restaurant_id = restaurant.id) }}>delete</a>
+<a href={{ url_for('menu', restaurant_id = restaurant.id) }}>menu</a>
+<br>
+{% endfor %}
+
+
+</body>
+</html>
