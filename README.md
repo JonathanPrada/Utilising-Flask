@@ -1,9 +1,9 @@
 # Utilizing-Flask
 Using Flask on Python. Here we utilise jsonify, GET/POST, Routing, SqlAlchemy, Templating, Dynamic URLs. 
 
-To run this final project
+To run this project, you need vagrant and virtual box.
 
-1. Navigate to the Full-Stack-Foundations/Lesson-4/Final-Project directory inside the vagrant environment
+1. Navigate to the vagrant environment with this project already included
 
 2. run database_setup.py to create the database
 
